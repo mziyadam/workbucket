@@ -8,7 +8,7 @@
                     Dashboard
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
-                <a class="nav-link" href="/aboutus">
+                <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     About Us
                 </a>
@@ -23,8 +23,8 @@
             </div>
         </div>
         <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            {{Auth::user() -> name}}
+            <div class="small"></div>
+            
         </div>
     </nav>
 </div>

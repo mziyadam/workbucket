@@ -14,15 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/landing/landingpage');
-	//return view('welcome');
+    if (auth()->user()) 
+    {
+         return view('home');
+    }
+    else
+    {
+           return view('/landing/landingpage');
+    }
 });
-
 Route::get('/terms', function () {
     return view('terms');
 	//return view('welcome');
 });
-
+Route::get('/aboutus', function () {
+    return view('/landing/aboutus');
+	//return view('welcome');
+});
 Route::get('/login', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
