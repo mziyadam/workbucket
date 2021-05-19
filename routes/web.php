@@ -31,14 +31,17 @@ Route::get('/aboutus', function () {
     return view('/landing/aboutus');
 	//return view('welcome');
 });
+Route::post('/completereg', function () {
+    return view('/completereg');
+	//return view('welcome');
+});
 Route::get('/login', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
-Route::get('/dashboard', function () {
-    return view('home');
+Route::get('/register2', function () {
+    return view('/auth/register2');
+	//return view('welcome');
 });
 
 require __DIR__.'/auth.php';
 
-Route::get('/home1', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

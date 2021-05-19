@@ -12,22 +12,19 @@
 
 </head>
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-light popin">
-    <?php 
-    if (auth()->user()) 
-    {
-         ?>
-         
-         <a href="#" onclick="history.go(-1)" class="position-absolute top-50 end-0 translate-middle-y me-4" style="color:#7f81b0; font-size:large">Back</p> </b></a>
+    <?php
+    if (auth()->user()) {
+    ?>
 
-         <?php
-    }
-    else
-    {
-           ?>
-           <a href="#" onclick="history.go(-1)" class="position-absolute top-50 end-0 translate-middle-y me-5 pe-5" style="color:#7f81b0; font-size:large"><b>Back</p> </a>
-    <a href="/login" class="position-absolute top-50 end-0 translate-middle-y me-4" style="color:#7f81b0; font-size:large">Sign In</p> </b></a>
+        <a href="#" onclick="history.go(-1)" class="position-absolute top-50 end-0 translate-middle-y me-4" style="color:#7f81b0; font-size:large">Back</p> </b></a>
 
-           <?php
+    <?php
+    } else {
+    ?>
+        <a href="#" onclick="history.go(-1)" class="position-absolute top-50 end-0 translate-middle-y me-5 pe-5" style="color:#7f81b0; font-size:large"><b>Back</p> </a>
+        <a href="/login" class="position-absolute top-50 end-0 translate-middle-y me-4" style="color:#7f81b0; font-size:large">Sign In</p> </b></a>
+
+    <?php
     }
     ?>
     <!-- <a href="/register" class="position-absolute top-50 end-0 translate-middle-y me-5 pe-5" style="color:#7f81b0; font-size:large"><b>Register</p> </a>
