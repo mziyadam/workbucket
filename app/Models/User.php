@@ -16,7 +16,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function getId()
+{
+  return $this->id;
+}
     protected $fillable = [
+        'id',
         'name',
         'email',
         'password',
